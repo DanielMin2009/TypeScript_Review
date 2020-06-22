@@ -1,33 +1,12 @@
 (() => {
-  // class Avenger {
-  //     name: string;
-  //     team: string;
-  //     realName?: string;
+  const addition = (a: number, b: number): number => a + b;
 
-  //     canFight: boolean;
-  //     winFights: number;
+  const name = (): string => "Hello Daniel";
 
-  //     constructor( name: string, team: string) {
-  //         this.name = name;
-  //         this.team = team;
-  //     }
-  // }
-
-  // let antman: Avenger = new Avenger('Antman', 'Captain');
-
-  // console.log(antman);
-
-  class Avenger {
-    constructor(
-      public name: string,
-      public team: string,
-      public realName?: string,
-      public canFight: boolean = true,
-      public winFights: number = 0
-    ) {}
-  }
-
-  let antman: Avenger = new Avenger("Antman", "Captain");
-
-  console.log(antman);
+  const getSalary = (): Promise<string> => {
+    return new Promise((resolve, reject) => {
+        resolve('Daniel');
+    });
+  };
+  getSalary().then((a) => console.log(a.toUpperCase()));
 })();
